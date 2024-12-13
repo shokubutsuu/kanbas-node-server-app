@@ -4,13 +4,13 @@ export default function AssignmentRoutes(app){
         const {assignmentId } = req.params;
         const assignmentUpdates = req.body;
         const status = await assigmentsDao.updateAssignment(assignmentId, assignmentUpdates);
-        req.send(status);
+        res.send(status);
     });
 
     app.delete("api/assignments/:assignmentId", async (req, res) =>{
         const {assignmentId} = req.params;
         const status = await assigmentsDao.deleteAssignment(assignmentId);
-        req.send(status);
+        res.send(status);
     });
 
 }

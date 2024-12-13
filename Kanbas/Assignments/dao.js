@@ -16,8 +16,6 @@ export function deleteAssignment(assignmentId) {
 export function findAssignmentsForCourse(courseNumber) {
     // console.log("assignment dao",courseNumber)
     return model.find({course:courseNumber})
-    
-    
     // const { assignments } = Database;
     // return assignments.filter((assignment) => assignment.course === courseId);
 }
